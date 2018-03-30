@@ -47,6 +47,40 @@
 
 
         // cocktailDB ajax request
+        
+var randomDrinkIndex;
+var queryRandomDrink;
+var queryIngredient;
+
+// console.log(drinkImage);
+/////////////////////// This is where cocktaildb kicks in.
+queryIngredient = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + 'Rum';//"Vodka" will be a var input recieved from face++"
+function getDrinkArray() {
+    $.ajax({
+        url: queryIngredient,
+        method: 'GET',
+        //////////////produce random number between one and index length.
+    }).then(function (response) {
+        randomDrinkIndex = (Math.floor((Math.random() * [response.drinks.length]) + 1));
+        //successfully returns link to full drink info page.
+        queryRandomDrink = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + response.drinks[randomDrinkIndex].idDrink;
+
+        $.ajax({
+            url: queryRandomDrink,
+            method: 'GET',
+        }).then(function (response) {
+            console.log(response);
+            var drinkImg = response.drinks[0].strDrinkThumb;
+            var drinkName = response.drinks[0].strDrink;
+            var recipe = response.drinks[0].strInstructions;
+            console.log(drinkName, recipe);
+        });
+    });
+
+
+}
+
+getDrinkArray();
 
 
 
