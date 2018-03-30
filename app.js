@@ -55,7 +55,7 @@ var queryIngredient;
 // console.log(drinkImage);
 /////////////////////// This is where cocktaildb kicks in.
 queryIngredient = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + 'Rum';//"Vodka" will be a var input recieved from face++"
-function getDrinkArray() {
+function selectDrink() {
     $.ajax({
         url: queryIngredient,
         method: 'GET',
@@ -80,7 +80,7 @@ function getDrinkArray() {
 
 }
 
-getDrinkArray();
+selectDrink();
 
 
 
