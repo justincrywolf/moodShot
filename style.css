@@ -30,3 +30,10 @@
     background: -webkit-linear-gradient(rgb(245, 241, 5), rgb(228, 69, 69));
     background: -o-linear-gradient(rgb(245, 241, 5), rgb(228, 69, 69));
 }
+main {
+    height: 100%
+}
+main, container {
+    padding-left: 300px;
+
+}
