@@ -3,7 +3,7 @@ $(document).ready(function () {
 // Load modal on page load.
 $(window).load(function(){
     //Disply the modal popup
-      $('#myModal').modal('show');
+      $('#openModal').modal('show');
   });
 
 
