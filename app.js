@@ -57,17 +57,18 @@ $.ajax({
     /////////////////////////////////////////
     
 
-    <script>
+    
  
         var randomDrinkIndex;
         var queryRandomDrink;
         var queryIngredient;
         var drinkElement = $(".drink");
-        var imgElement = $("#drinkImg")
+        var imgElement = $("#drinkImg");
        
 
 
         /////////////////////// This is where cocktaildb kicks in.
+
         queryIngredient = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + 'Rum';//"Vodka" will be a var input recieved from face++"
         function selectDrink() {
             $.ajax({
@@ -111,15 +112,5 @@ $.ajax({
                  
 
         selectDrink();
-
-
-
-
-
-
-
-    </script>
-
-
 
 // });
