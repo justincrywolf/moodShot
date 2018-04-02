@@ -1,3 +1,12 @@
+$(document).ready(function () {
+
+// Load modal on page load.
+$(window).load(function(){
+    //Disply the modal popup
+      $('#openModal').modal('show');
+  });
+
+
 // click handler for submitting image
 // $( "#submit" ).on( "click", function(){
 //     var faceURL = $(this).val
@@ -113,4 +122,16 @@ $.ajax({
 
         selectDrink();
 
-// });
+
+
+
+
+
+
+
+    </script>
+
+
+
+ });
+
