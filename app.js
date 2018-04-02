@@ -22,7 +22,7 @@ $.ajax({
     method: "POST"
 }).then(function (response) {
     var emotions = response.faces[0].attributes.emotion;
-    console.log(emotions);
+    console.log('emotions; ',emotions);
     function sortProperties(obj) {
         // convert object into array
         var sortable = [];
